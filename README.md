@@ -60,14 +60,18 @@ I will use Divvy trip data, a valuable historical dataset provided by Motivate I
 
 **Tools:** <br>
 - Data cleaning & processing - SQL on PostgreSQL
-- Data visualization - [Tableau](https://public.tableau.com/app/profile/hui.min.ho/viz/CyclisticBikeShareCaseStudy_16931448059910/Sheet1#2)
+- Data visualization - Microsoft Power BI
 
 ### 3. Process
 The basis for this analysis is **2022** data and the steps for processing the data are as follow:
 
-#### Data Processing
+![Data Combining](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Combining%20Months%20Data%20Cyclistic%20.sql)
 
-After setting up the database, twelve tables—one for each month—will be created. Each table will have columns tailored for data storage and integrity. The example given is the "January" table, built using a CREATE TABLE command. This same approach will be applied to all months to properly organize the company's data.
+![Data Exploration](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Data%20Exploration.sql)
+
+![Data Cleaning](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Data%20Cleaning.sql)
+
+![Data Analysis](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Analysis%20Cyclistic.sql)
 
 #### Data Combining
 After importing the tables into PostgreSQL, the next step involves merging the twelve monthly tables into a single consolidated table for the year 2022. This consolidation enables more efficient and integrated analysis of the data for that period.
@@ -121,7 +125,7 @@ The initial comparison focuses on "Bike type preferences between members and cas
 
 The figure below shows the **total number of rides and Bike Type Usage in 2022** carried out by Cyclistic members and casual riders in **2022**. 
 
-![Membership Types]..
+![Membership Types](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Count%20Bike%20Types.png)
 
 * Members account for 59.74% of total riders, while casual riders make up 40.3%.
 * Bike type usage analysis shows:
@@ -132,8 +136,9 @@ The figure below shows the **total number of rides and Bike Type Usage in 2022**
 ### - Total of Bike Trips By Month, Week and Day
 
 Next, we examine the distribution of trips by month, day of the week, and hour of the day.
-
-![Total of Bike Trips]..
+![Total of Bike Trip by Day](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Total%20Duration%20Day.png)
+![Total of Bike Trip By Week](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Total%20Duration%20Week.png)
+![Total of Bike Trip by Month](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Total%20Duration%20Month.png)
 
 Time of Day Analysis
 * Members: Peak usage occurs during morning (6–8 AM) and evening (4–8 PM), suggesting commuter behavior.
@@ -156,7 +161,7 @@ Key Insight
 
 An analysis of ride durations was conducted to compare usage patterns between casual riders and annual members.
 
-![Duration Trips]..
+![Average Trips](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Average%20Duration.png)
 
 Average Ride Length
 *  Casual riders have significantly longer trip durations (≈2x) compared to members.
@@ -178,24 +183,26 @@ The data underscores a clear divide—casual users favor leisure-oriented, exten
 
 To further understand the differences between casual riders and members, we analyze the locations of trip start and end stations. We select stations with the highest trip volume, applying filters to derive the following insights
 
-![Bike Trip End Locations]...
+![Bike Trip End LOcations](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Departure%20location.png)
+![Bike Trip End Locations](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Departure.png)
 
-Casual Riders:
+Casual:
 *  Start trips primarily near tourist and leisure destinations, including: Museums, Parks, Beaches, Marinas (docking points) and Aquariums
 
-Annual Members:
+Member:
 *  Start trips more frequently near practical and daily-use locations, such as: Universities, Residential areas, Restaurants, Hospitals, Supermarkets, Theaters, Schools, Banks, Factories, Train stations, Parks and plazas
 
 Key Insight:
 *  Casual riders favor recreational and scenic spots, suggesting leisure-based usage.
 *  Members show commuter-oriented patterns, with trips starting near essential services, workplaces, and transit hubs.
 
-![Bike Trip Start Locations]...
+![Bike Trip Start Locations](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Arrival1.png)
+![Bike Trip Start Locations](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Arrival%202.png)
 
-Casual Riders:
+Casual:
 *  End trips predominantly near leisure and recreational areas, including: Parks, Museums and Tourist attractions
 
-Annual Members:
+Member:
 *  End trips most frequently near daily-use destinations, such as: Universities, Residential neighborhoods and Commercial districts.
 
 Key Insight:
@@ -204,6 +211,8 @@ The data reinforces a clear behavioral divide:
 *  Members rely on bikes for routine commuting and practical errands, with trips tied to work, education, and essential services.
 
 ### 5. Share
+
+![DashBoard](https://github.com/Juliana-89/Project-Cyclistic-Google-Case-Study/blob/main/Dashboard%20cyclistic.png)
 
 Casuas 
 *  They travel twice as much, but less frequently than the members.
